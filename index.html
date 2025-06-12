@@ -1,18 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Проекти учнів</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
 <body>
-    <h1>Welcome to My Simple HTML Page</h1>
-    <p>This is a basic HTML document structure.</p>
-    <p>Feel free to modify it as you wish!</p>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <a href="https://www.example.com">Visit Example.com</a>
+    <header>
+        <div class="header-content">
+            <h1>Проекти моїх учнів</h1>
+            <p>Вітаю на платформі для демонстрації студентських робіт</p>
+            
+        </div>
+        <div class="decorations">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Korzh Fedir -->
+            <div class="student-card" data-balance="280" data-color="120">
+                <div class="animated-strip"></div>
+                <i class="fas fa-user-graduate"></i>
+                <h2>Корж Федір</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">280</span> логіків
+                </div>
+                <a href="Korzh/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- Dmytro Dendobriy -->
+            <div class="student-card" data-balance="251" data-color="100">
+                <div class="animated-strip"></div>
+                <i class="fas fa-laptop-code"></i>
+                <h2>Деньдобрий Дмитро</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">251</span> логіків
+                </div>
+                <a href="Dmytro/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- Ulyana Bushtruk -->
+            <div class="student-card" data-balance="208" data-color="40">
+                <div class="animated-strip"></div>
+                <i class="fas fa-paint-brush"></i>
+                <h2>Буштрук Уляна</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">208</span> логіків
+                </div>
+                <a href="Ulyana/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- David Pidkuyko -->
+            <div class="student-card" data-balance="200" data-color="30">
+                <div class="animated-strip"></div>
+                <i class="fas fa-robot"></i>
+                <h2>Підкуйко Давид</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">200</span> логіків
+                </div>
+                <a href="David/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- Misha Duboviy -->
+            <div class="student-card" data-balance="244" data-color="90">
+                <div class="animated-strip"></div>
+                <i class="fas fa-gamepad"></i>
+                <h2>Дубовий Михайло</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">244</span> логіків
+                </div>
+                <a href="Misha/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- Timophiy Ponomariov -->
+            <div class="student-card" data-balance="234" data-color="80">
+                <div class="animated-strip"></div>
+                <i class="fas fa-mobile-alt"></i>
+                <h2>Понаморьов Тимофій</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">234</span> логіків
+                </div>
+                <a href="Timophiy/index.html" class="btn">Переглянути проекти</a>
+            </div>
+
+            <!-- Roma Rachinskiy -->
+            <div class="student-card" data-balance="196" data-color="20">
+                <div class="animated-strip"></div>
+                <i class="fas fa-database"></i>
+                <h2>Рачинський Роман</h2>
+                <div class="balance">
+                    <i class="fas fa-coins coin-icon"></i>
+                    <span class="balance-value">196</span> логіків
+                </div>
+                <a href="Roma/index.html" class="btn">Переглянути проекти</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Проекти учнів. Усі права захищені.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анімація загального балансу
+            anime({
+                targets: '#total-balance',
+                innerText: [0, 1613],
+                round: 1,
+                duration: 3000,
+                easing: 'easeOutExpo'
+            });
+            
+            // Анімація логіківок
+            document.querySelectorAll('.coin-icon').forEach((coin, index) => {
+                anime({
+                    targets: coin,
+                    scale: [
+                        {value: 1, duration: 0},
+                        {value: 1.3, duration: 300, easing: 'easeOutExpo'},
+                        {value: 1, duration: 500, easing: 'easeInOutExpo'}
+                    ],
+                    rotateY: [
+                        {value: 0, duration: 0},
+                        {value: 360, duration: 1000, easing: 'easeInOutSine'}
+                    ],
+                    delay: index * 300,
+                    loop: true
+                });
+            });
+            
+            // Анімація градієнтних тіней
+            document.querySelectorAll('.student-card').forEach(card => {
+                const hue = parseInt(card.dataset.color);
+                const shadowColor = `hsla(${hue}, 80%, 45%, 0.3)`;
+                
+                card.style.setProperty('--shadow-color', shadowColor);
+                card.style.boxShadow = `0 10px 30px ${shadowColor}`;
+                
+                card.addEventListener('mouseenter', function() {
+                    anime({
+                        targets: card,
+                        boxShadow: [
+                            {value: `0 10px 30px hsla(${hue}, 80%, 45%, 0.3)`, duration: 0},
+                            {value: `0 15px 35px hsla(${hue}, 80%, 50%, 0.5)`, duration: 500}
+                        ],
+                        scale: 1.02,
+                        duration: 500,
+                        easing: 'easeOutExpo'
+                    });
+                    
+                    const balanceValue = card.querySelector('.balance-value');
+                    const balance = parseInt(balanceValue.textContent);
+                    
+                    anime({
+                        targets: balanceValue,
+                        innerText: [0, balance],
+                        round: 1,
+                        duration: 1000,
+                        easing: 'easeOutExpo'
+                    });
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    anime({
+                        targets: card,
+                        boxShadow: [
+                            {value: `0 15px 35px hsla(${hue}, 80%, 50%, 0.5)`, duration: 0},
+                            {value: `0 10px 30px hsla(${hue}, 80%, 45%, 0.3)`, duration: 500}
+                        ],
+                        scale: 1,
+                        duration: 500,
+                        easing: 'easeOutExpo'
+                    });
+                });
+            });
+            
+            // Анімація кіл у шапці
+            anime({
+                targets: '.circle',
+                translateY: [
+                    {value: 0, duration: 0},
+                    {value: -20, duration: 2000, easing: 'easeInOutSine'},
+                    {value: 0, duration: 2000, easing: 'easeInOutSine'}
+                ],
+                delay: anime.stagger(500),
+                loop: true,
+                direction: 'alternate'
+            });
+            
+            // Анімація градієнтних смужок
+            anime({
+                targets: '.animated-strip',
+                backgroundPosition: ['0% 50%', '300% 50%'],
+                duration: 6000,
+                easing: 'linear',
+                loop: true
+            });
+        });
+    </script>
+</body>
 </html>
