@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lamborghini Huracán</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+      --accent-color: #e8b007;
+      --hover-accent: #fff100;
+      --text-color: #f4f4f4;
+      --dark: #121212;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--main-bg);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--dark);
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+    }
+
+    nav {
+      background: #000;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .hero {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Lamborghini_Huracan_LP610-4_-_Frontansicht%2C_27._Juli_2014%2C_D%C3%BCsseldorf.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      color: white;
+      z-index: 1;
+      position: relative;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .benefits, .gallery, .specs, .reviews {
+      display: grid;
+      gap: 20px;
+    }
+
+    .benefits {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .benefit {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 500px;
+      border-radius: 10px;
+    }
+
+    .specs {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .review {
+      background: #2b2b2b;
+      border-left: 4px solid var(--accent-color);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background: #333;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+    }
+
+    .button {
+      background: var(--accent-color);
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--hover-accent);
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      padding: 40px;
+      color: #aaa;
+    }
+
+    .scroll-up {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent-color);
+      padding: 12px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 18px;
+      color: #000;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lamborghini Huracán</h1>
+  </header>
+
+  <nav>
+    <a href="#about">Про авто</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#specs">Характеристики</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Швидкість. Стиль. Досконалість.</h2>
+  </section>
+
+  <section id="about">
+    <h3>Про Lamborghini Huracán</h3>
+    <p>Huracán — це символ спортивного духу, інноваційних технологій та італійської естетики. Він створений для тих, хто хоче керувати не просто авто, а легендою.</p>
+    <div class="benefits">
+      <div class="benefit"><strong>Дизайн</strong><br>Футуристичні лінії та аеродинаміка нового покоління.</div>
+      <div class="benefit"><strong>Потужність</strong><br>V10, що реве як звір — 610 к.с. під капотом.</div>
+      <div class="benefit"><strong>Технології</strong><br>Система повного приводу, активна підвіска, інтегрована навігація.</div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h3>Галерея</h3>
+    <div class="gallery">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCkQ9-gUPkmH-g-Ud7hr5kAL6OJDFoq7rOKA&s" alt="1" />
+      <img src="https://media.istockphoto.com/id/2114779159/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B2%D0%B8%D1%82%D1%80%D0%B8%D0%BD%D0%B0-lamborghini-huracan-evo-base-%D0%B2-%D0%B4%D0%B8%D0%BB%D0%B5%D1%80%D1%81%D0%BA%D0%BE%D0%BC-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5-lamborghini-%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D0%B5%D1%82-huracan-evo-%D1%81-5.jpg?s=612x612&w=0&k=20&c=--ozttJixZfTYDGd_ZgTytbUdJbBJ_YnNZbXNyJ2U20="alt="2" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Lamborghini_Hurac%C3%A1n_LP_610_%2817913080973%29.jpg/250px-Lamborghini_Hurac%C3%A1n_LP_610_%2817913080973%29.jpg" alt="3" />
+    </div>
+  </section>
+
+  <section class="video">
+    <h3>Подивись на Huracán в дії</h3>
+    <iframe width="892" height="502" src="https://www.youtube.com/embed/wTZ1St88ex0" title="ПОСЛЕДНИЙ настоящий суперкар!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <section id="specs">
+    <h3>Характеристики</h3>
+    <div class="specs">
+      <div><strong>Двигун:</strong> 5.2L V10</div>
+      <div><strong>Потужність:</strong> 610 к.с.</div>
+      <div><strong>0–100 км/год:</strong> 3.2 сек</div>
+      <div><strong>Макс. швидкість:</strong> 325 км/год</div>
+      <div><strong>Трансмісія:</strong> 7-ступ. робот</div>
+      <div><strong>Привід:</strong> Повний</div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Відгуки</h3>
+    <div class="reviews">
+      <div class="review">"Це не просто авто — це адреналін на колесах!" — Дмитро, Одеса</div>
+      <div class="review">"Huracán змінює відчуття від водіння назавжди." — Марія, Харків</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Зв’яжіться з нами</h3>
+    <form>
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Повідомлення" rows="5"></textarea>
+      <button class="button" type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Lamborghini Huracán. Всі права захищено.
+  </footer>
+
+  <div class="scroll-up" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+</body>
+</html>
